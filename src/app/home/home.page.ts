@@ -17,6 +17,7 @@ export class HomePage implements OnInit {
     this.nfc.addNdefListener().subscribe(async data => {
       if (data && data.tag && data.tag.id) {      
         if (data.tag.ndefMessage) {
+          this.pointAmmount += 100;
           let toast = await this.toastCtrl.create({
             message: 'NFC Tag found',
             duration: 1000,
