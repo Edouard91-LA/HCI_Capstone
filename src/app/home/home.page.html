@@ -1,14 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <div class="home-intro">
+      <p>Salut jeune utilisateur ! Tu passes tes journées sur ton smartphone sans t'en apercevoir ?</p>
+      <p>Tu as toqué à la bonne porte. Cette application va te permettre de régler ton problème d'addiction, 
+        le tout dans la joie et la bonne humeur !</p>
+    </div>
+
+    <div class="home-point">
+      Voici ton nombre de point de :
+      <div class="displayPoint">
+        {{pointAmmount}}  
+      </div>
+    </div>
+
+    <div class="home-modifyPoint">
+      <button (click)="addBonus()">Add a bonus</button> 
+      <button (click)="addMalus()">Add a malus</button> 
+    </div>
+    
 </ion-content>
